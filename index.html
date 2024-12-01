@@ -3,38 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profiles</title>
+    <title>Little_Rat_2</title>
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Cursive', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #121212;
+            overflow: hidden;
             color: white;
         }
 
+        /* Background Video */
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Main Content */
+        .content {
+            text-align: center;
+            z-index: 1;
+        }
+
+        .username {
+            font-size: 4rem;
+            font-family: 'Trebuchet MS', cursive, sans-serif;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        /* Social Icons */
         .social-icons {
             display: flex;
-            gap: 40px;
+            justify-content: center;
+            gap: 30px;
         }
 
         .social-icons a {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: white;
             text-decoration: none;
-            transition: color 0.3s, transform 0.3s;
+            transition: transform 0.3s, color 0.3s;
         }
 
         .social-icons a:hover {
             transform: scale(1.2);
         }
 
-        /* Icon-Specific Hover Colors */
+        /* Specific Colors for Icons */
         .steam:hover {
             color: #00adee;
         }
@@ -49,22 +77,36 @@
     </style>
 </head>
 <body>
-    <div class="social-icons">
-        <!-- Steam -->
-        <a href="https://steamcommunity.com/profiles/76561199083605754/" target="_blank" class="steam">
-            <i class="fab fa-steam"></i>
-        </a>
+    <!-- Background Video -->
+    <div class="background-video">
+        <iframe 
+            src="https://www.youtube.com/embed/1NTzUhHatl0?autoplay=1&mute=1&loop=1&playlist=1NTzUhHatl0" 
+            frameborder="0" 
+            allow="autoplay; fullscreen" 
+            allowfullscreen 
+            style="width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; pointer-events: none;">
+        </iframe>
+    </div>
 
-        <!-- YouTube -->
-        <a href="https://www.youtube.com/@Antorn42" target="_blank" class="youtube">
-            <i class="fab fa-youtube"></i>
-        </a>
+    <!-- Main Content -->
+    <div class="content">
+        <div class="username">Little_Rat_2</div>
+        <div class="social-icons">
+            <!-- Steam -->
+            <a href="https://steamcommunity.com/profiles/76561199083605754/" target="_blank" class="steam">
+                <i class="fab fa-steam"></i>
+            </a>
 
-        <!-- Discord -->
-        <a href="https://discord.com/users/744920798443077644" target="_blank" class="discord">
-            <i class="fab fa-discord"></i>
-        </a>
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/@Antorn42" target="_blank" class="youtube">
+                <i class="fab fa-youtube"></i>
+            </a>
+
+            <!-- Discord -->
+            <a href="https://discord.com/users/744920798443077644" target="_blank" class="discord">
+                <i class="fab fa-discord"></i>
+            </a>
+        </div>
     </div>
 </body>
 </html>
-
