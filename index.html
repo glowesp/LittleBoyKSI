@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profiles</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,38 +13,58 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
             background-color: #121212;
             color: white;
-            margin: 0;
-            text-align: center;
-            flex-direction: column;
         }
 
-        .links {
+        .social-icons {
             display: flex;
-            flex-direction: column;
-            gap: 20px;
+            gap: 40px;
         }
 
-        a {
+        .social-icons a {
+            font-size: 3rem;
+            color: white;
             text-decoration: none;
-            font-size: 1.5rem;
-            color: #00acee;
             transition: color 0.3s, transform 0.3s;
         }
 
-        a:hover {
-            color: #1db954;
-            transform: scale(1.1);
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        /* Icon-Specific Hover Colors */
+        .steam:hover {
+            color: #00adee;
+        }
+
+        .youtube:hover {
+            color: #FF0000;
+        }
+
+        .discord:hover {
+            color: #7289da;
         }
     </style>
 </head>
 <body>
-    <h1>Connect With Me</h1>
-    <div class="links">
-        <a href="https://steamcommunity.com/id/yourprofile" target="_blank">Steam</a>
-        <a href="https://www.youtube.com/c/yourchannel" target="_blank">YouTube</a>
-        <a href="https://discord.com/users/youruserid" target="_blank">Discord</a>
+    <div class="social-icons">
+        <!-- Steam -->
+        <a href="https://steamcommunity.com/profiles/76561199083605754/" target="_blank" class="steam">
+            <i class="fab fa-steam"></i>
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/@Antorn42" target="_blank" class="youtube">
+            <i class="fab fa-youtube"></i>
+        </a>
+
+        <!-- Discord -->
+        <a href="https://discord.com/users/744920798443077644" target="_blank" class="discord">
+            <i class="fab fa-discord"></i>
+        </a>
     </div>
 </body>
 </html>
+
