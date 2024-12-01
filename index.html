@@ -39,10 +39,17 @@
         }
 
         .username {
-            font-size: 4rem;
+            font-size: 3rem;  /* Adjusted for smaller size */
             font-family: 'Special Elite', cursive;
             margin-bottom: 30px;
             color: white;
+        }
+
+        /* Responsive Font Size for "Little_Rat_2" */
+        @media (max-width: 600px) {
+            .username {
+                font-size: 2.5rem;  /* Smaller font size for mobile */
+            }
         }
 
         /* Social Icons */
@@ -81,13 +88,12 @@
     <!-- Background Video -->
     <div class="background-video">
         <iframe 
-            src="https://www.youtube.com/embed/1NTzUhHatl0?autoplay=1&loop=1&playlist=1NTzUhHatl0&controls=0" 
+            src="https://www.youtube.com/embed/1NTzUhHatl0?autoplay=1&loop=1&playlist=1NTzUhHatl0&controls=0&mute=1" 
             frameborder="0" 
             allow="autoplay; fullscreen" 
             allowfullscreen 
             style="width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; pointer-events: none;">
         </iframe>
-
     </div>
 
     <!-- Main Content -->
@@ -112,4 +118,5 @@
     </div>
 </body>
 </html>
+
 
