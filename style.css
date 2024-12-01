@@ -1,52 +1,64 @@
-/* Basic reset and body styling */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    color: white;
-    background: black;
+/* General reset and body styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Fullscreen Video Background */
-.video-container video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    pointer-events: none;
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  overflow: hidden; /* Prevent scrolling */
 }
 
-/* Content Styling */
+/* Video Background Styles */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Ensure the video is behind other content */
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the screen without distortion */
+}
+
+/* Content Section */
 .content {
-    text-align: center;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 30vh; /* Center the content vertically */
 }
 
 /* Username Styling */
 .username {
-    font-size: 3rem;
-    color: white;
-    font-family: 'Special Elite', cursive;
-    margin-bottom: 30px;
+  font-size: 3em;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* Social Media Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
 .social-icons a {
-    font-size: 2rem;
-    color: white;
-    margin: 0 20px;
-    text-decoration: none;
-    transition: transform 0.3s ease;
+  color: white;
+  font-size: 2em;
+  text-decoration: none;
 }
 
 .social-icons a:hover {
-    transform: scale(1.2);
+  color: #ff7f00;
 }
-
