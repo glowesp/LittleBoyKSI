@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Little_Rat_2</title>
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
     <style>
+        /* Reset and basic body styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -23,112 +22,65 @@
 
         /* Fullscreen Background Video */
         .background-video video {
-            position: fixed; /* Fix to the screen */
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Ensures the video covers the screen */
+            object-fit: cover;
             z-index: -1;
             pointer-events: none;
         }
 
-        /* Main Content */
+        /* Centered content */
         .content {
             text-align: center;
             z-index: 1;
         }
 
+        /* Fancy username styling */
         .username {
-            font-size: 3rem;  /* Adjusted for smaller size */
+            font-size: 3rem;
+            color: white;
             font-family: 'Special Elite', cursive;
             margin-bottom: 30px;
-            color: white;
         }
 
-        /* Responsive Font Size for "Little_Rat_2" */
-        @media (max-width: 600px) {
-            .username {
-                font-size: 2.5rem;  /* Smaller font size for mobile */
-            }
-        }
-
-        /* Social Icons */
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
-
+        /* Social media icon styling */
         .social-icons a {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: white;
+            margin: 0 15px;
             text-decoration: none;
-            transition: transform 0.3s, color 0.3s;
+            transition: transform 0.3s ease;
         }
 
         .social-icons a:hover {
             transform: scale(1.2);
         }
 
-        /* Specific Colors for Icons */
-        .steam:hover {
-            color: #00adee;
-        }
-
-        .youtube:hover {
-            color: #FF0000;
-        }
-
-        .discord:hover {
-            color: #7289da;
-        }
     </style>
 </head>
 <body>
-    <!-- Background Video -->
+    <!-- Video Background -->
     <div class="background-video">
-        <video id="bg-video" autoplay loop>
-            <source src="assets/Riding waves.mp4" type="video/mp4">
+        <video autoplay loop muted>
+            <source src="assets/Riding%20waves.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
 
-    <!-- Main Content -->
+    <!-- Content Section -->
     <div class="content">
         <div class="username">Little_Rat_2</div>
+
+        <!-- Social Media Links with Icons -->
         <div class="social-icons">
-            <!-- Steam -->
-            <a href="https://steamcommunity.com/profiles/76561199083605754/" target="_blank" class="steam">
-                <i class="fab fa-steam"></i>
-            </a>
-
-            <!-- YouTube -->
-            <a href="https://www.youtube.com/@Antorn42" target="_blank" class="youtube">
-                <i class="fab fa-youtube"></i>
-            </a>
-
-            <!-- Discord -->
-            <a href="https://discord.com/users/744920798443077644" target="_blank" class="discord">
-                <i class="fab fa-discord"></i>
-            </a>
+            <a href="https://steamcommunity.com/profiles/76561199083605754/" target="_blank" title="Steam"><i class="fab fa-steam"></i></a>
+            <a href="https://discord.com/users/744920798443077644" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+            <a href="https://www.youtube.com/@Antorn42" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
     </div>
 
-    <script>
-        // Detect device type and adjust video autoplay
-        const video = document.getElementById('bg-video');
-        
-        // Check if the device is mobile
-        const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-        
-        if (isMobile) {
-            // If mobile, mute the video to allow autoplay
-            video.muted = true;
-        } else {
-            // For desktop, allow autoplay with sound
-            video.muted = false;
-        }
-    </script>
 </body>
 </html>
