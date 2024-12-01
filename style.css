@@ -1,45 +1,50 @@
-body {
-    font-family: 'Arial', sans-serif;
-    overflow: hidden;
+/* Basic reset and body styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    position: relative;
+    font-family: Arial, sans-serif;
     color: white;
 }
 
-.background-video {
-    position: absolute;
+/* Fullscreen Video Background */
+.video-container video {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     z-index: -1;
+    pointer-events: none;
 }
 
-.social-icons {
-    display: flex;
-    gap: 20px;
+/* Content Styling */
+.content {
+    text-align: center;
+    z-index: 1;
 }
 
-.icon {
-    font-size: 2.5rem;
+/* Username Styling */
+.username {
+    font-size: 3rem;
     color: white;
-    text-decoration: none;
-    transition: transform 0.3s, color 0.3s;
+    font-family: 'Special Elite', cursive;
+    margin-bottom: 30px;
 }
 
-.icon:hover {
+/* Social Media Icons */
+.social-icons a {
+    font-size: 2rem;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
     transform: scale(1.2);
 }
-
-
-@media only screen and (max-width: 1000px) {
-    .background-video {
-        margin: 0 auto;
-        height: 100%;
-        width: auto;
-    }
-} 
