@@ -10,7 +10,7 @@
 <body>
   <!-- Video Background -->
   <div class="video-container">
-    <video autoplay loop>
+    <video autoplay loop id="backgroundVideo">
       <source src="assets/Riding%20waves.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
@@ -18,7 +18,7 @@
 
   <!-- Content Section -->
   <div class="content">
-    <div class="username">Little_Rat_2</div>
+    <div class="username">little cumslut</div>
 
     <!-- Social Media Links with Icons -->
     <div class="social-icons">
@@ -33,5 +33,26 @@
       </a>
     </div>
   </div>
+
+  <!-- Mute Button -->
+  <button id="muteButton" class="mute-button">
+    <i class="fas fa-volume-mute"></i>
+  </button>
+
+  <!-- Add this before </body> -->
+  <script>
+    const video = document.getElementById('backgroundVideo');
+    const muteButton = document.getElementById('muteButton');
+    
+    // Set initial mute state
+    video.muted = true;
+    
+    muteButton.addEventListener('click', () => {
+      video.muted = !video.muted;
+      muteButton.innerHTML = video.muted ? 
+        '<i class="fas fa-volume-mute"></i>' : 
+        '<i class="fas fa-volume-up"></i>';
+    });
+  </script>
 </body>
 </html>
