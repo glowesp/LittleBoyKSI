@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Little_Rat_2</title>
+  <title>Little boy tryna get involved
+    Come on then, come on then, let's get involved, you prick</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,14 +13,18 @@
   <!-- Video Background -->
   <div class="video-container">
     <video autoplay loop id="backgroundVideo">
-      <source src="assets/Riding%20waves.mp4" type="video/mp4">
+      <source src="assets/fries.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
 
   <!-- Content Section -->
   <div class="content">
-    <div class="username">Little_Rat_2</div>
+    <div class="profile-picture">
+      <img src="assets/favicon.ico" alt="Profile Picture">
+    </div>
+    <div class="username">little cumslut</div>
+    <div class="username" style="font-size: 0.8em;">just put the fries in the bag</div>
 
     <!-- Social Media Links with Icons -->
     <div class="social-icons">
@@ -39,7 +45,25 @@
     <i class="fas fa-volume-mute"></i>
   </button>
 
-  <!-- Add this before </body> -->
+
+  <footer class="footer">
+    <p>created using LLM Web3 blockchain technology</p>
+  </footer>
+
+  <!-- Terms Agreement Popup -->
+  <div class="terms-popup" id="termsPopup">
+    <div class="terms-content">
+      <h2>Terms of Agreement</h2>
+      <p>By entering this website, you acknowledge and agree to the following:</p>
+      <ul>
+        <li>freaky terms of agreement</li>
+        <li>get freaked by p diddy</li>
+        <li>- Antorn42</li>
+      </ul>
+      <button class="accept-button" onclick="acceptTerms()">Accept & Enter</button>
+    </div>
+  </div>
+
   <script>
     const video = document.getElementById('backgroundVideo');
     const muteButton = document.getElementById('muteButton');
@@ -47,12 +71,32 @@
     // Set initial mute state
     video.muted = true;
     
+    // Set playback speed to 2x
+    video.playbackRate = 2.0;
+    
     muteButton.addEventListener('click', () => {
       video.muted = !video.muted;
       muteButton.innerHTML = video.muted ? 
         '<i class="fas fa-volume-mute"></i>' : 
         '<i class="fas fa-volume-up"></i>';
     });
+
+    // Terms agreement script
+    function acceptTerms() {
+      const popup = document.getElementById('termsPopup');
+      popup.classList.add('fade-out');
+      
+      // Wait for animation to complete before hiding
+      setTimeout(() => {
+        popup.style.display = 'none';
+        popup.classList.remove('fade-out');
+      }, 500);
+    }
+
+    // Show popup on every reload
+    window.onload = function() {
+      document.getElementById('termsPopup').style.display = 'flex';
+    }
   </script>
 </body>
 </html>
