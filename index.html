@@ -88,7 +88,7 @@
 <body>
     <!-- Background Video -->
     <div class="background-video">
-        <video autoplay loop>
+        <video id="bg-video" autoplay loop>
             <source src="assets/Riding waves.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -114,6 +114,21 @@
             </a>
         </div>
     </div>
+
+    <script>
+        // Detect device type and adjust video autoplay
+        const video = document.getElementById('bg-video');
+        
+        // Check if the device is mobile
+        const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+        
+        if (isMobile) {
+            // If mobile, mute the video to allow autoplay
+            video.muted = true;
+        } else {
+            // For desktop, allow autoplay with sound
+            video.muted = false;
+        }
+    </script>
 </body>
 </html>
-
